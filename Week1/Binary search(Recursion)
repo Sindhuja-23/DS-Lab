@@ -1,13 +1,11 @@
 #include<stdio.h>
 
 int binary_search(int arr[], int low,int high , int element){
-
     int mid = 0;
     if ( low <= high){
         mid = (low + high ) / 2;
         if (arr[mid] == element){
             return mid;
-
         }
         else if ( arr[mid] < element) {
             return binary_search(arr, mid + 1, high, element);
@@ -20,11 +18,8 @@ int binary_search(int arr[], int low,int high , int element){
     return - 1;
 
     }
-
-
 int main(){
     int size, key;
-
     printf("Enter number of elements : ");
     scanf("%d", &size);
     int arr[size];
@@ -48,3 +43,15 @@ int main(){
     }
 
     }
+Input:
+Enter number of elements : 5
+Enter elements in sorted order : 10 20 30 40 55
+Element to be searched : 30
+Output:
+Element is found at 3
+Input:
+Enter number of elements : 5
+Enter elements in sorted order : 1 3 6 7 9
+Element to be searched : 4
+Output:
+Element is not found
