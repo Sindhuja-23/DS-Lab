@@ -15,16 +15,11 @@ int binary_search(int arr[], int size, int element){
         else if(arr[mid] > element){
             high = mid - 1;
         }
-
     }
     return - 1;
-
     }
-
-
 int main(){
     int size, key;
-
     printf("Enter number of elements : ");
     scanf("%d", &size);
     int arr[size];
@@ -46,3 +41,15 @@ int main(){
     }
 
     }
+Input:
+Enter number of elements : 6
+Enter elements in sorted order : 1 2 5 9 10 12
+Element to be searched : 9
+Output:
+Element is found at 4
+Input:
+Enter number of elements : 7
+Enter elements in sorted order : 1 4 6 9 10 14 50
+Element to be searched : 20
+Output:
+Element is not found
