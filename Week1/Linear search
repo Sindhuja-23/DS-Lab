@@ -1,50 +1,63 @@
 #include <stdio.h>
-int linearSearch(int [],int,int);
+int linearSearch(int arr[], int size, int index, int element)
+{
+    int pos = 0;
+
+    if(index >= size)
+    {
+        return 0;
+    }
+
+    else if (arr[index] == size)
+    {
+        pos = index + 1;
+        return pos;
+    }
+
+    else
+    {
+        return linearSearch(arr, size, index+1, element);
+    }
+    return pos;
+}
 
 int main()
 {
-    int a[10];
-    int n,i,x,result;
-    printf("Enter the number of elements \n");
-    scanf("%d",&n);
-    printf("Enter the %d elements",n);
-    for(i = 0; i < n; i++){
-        scanf("%d",&a[i]);
-    }
-    printf("Enter the serach element \n");
-    scanf("%d",&x);
-    result = linearSearch(a,n,x);
-    if (result == -1){
-        printf("Element not found \n");
-    }
-    else{
-        printf("Element is found at %d position",result);
-    }
-}
-int linearSearch(int a[],int n,int key){
-    int i;
-    for(i = 0; i <n ; i++){
-        if(a[i] == key){
-            return i + 1;
-        }
-    }
-    return -1;
-}
+    int size, element, pos, index = 0, arr[100];
+    printf("Enter size ");
+    scanf("%d", &size);
 
-Input:
-Enter the number of elements
-4
-Enter the 4 elements1 3 5 6
-Enter the serach element
-3
-Output:
-Element is found at 2 position
+    printf("Enter the array elements\n");
+    for (int index = 0; index < size; index++)
+    {
+        scanf("%d", &arr[index]);
+    }
 
+    printf("Enter the element to search  ");
+    scanf("%d", &element);
+
+    pos =  linearSearch(arr, element, 0, size);
+    if (pos == 0)
+    {
+        printf("Element  not found \n");
+    }
+    else
+    {
+        printf("Element found at %d \n",pos);
+    }
+    return 0;
+}
 Input:
-Enter the number of elements
-5
-Enter the 5 elements12 34 45 65 70
-Enter the serach element
-50
+Enter size 5
+Enter the array elements
+1 2 7 9 10
+Enter the element to search  7
 Output:
-Element not found
+Element found at 3
+Input:
+Enter size 5
+Enter the array elements
+10 2 5 8 20
+Enter the element to search  3
+Output:
+Element  not found
