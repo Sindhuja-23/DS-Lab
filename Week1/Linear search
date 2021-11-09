@@ -30,3 +30,21 @@ int linearSearch(int a[],int n,int key){
     }
     return -1;
 }
+
+Input:
+Enter the number of elements
+4
+Enter the 4 elements1 3 5 6
+Enter the serach element
+3
+Output:
+Element is found at 2 position
+
+Input:
+Enter the number of elements
+5
+Enter the 5 elements12 34 45 65 70
+Enter the serach element
+50
+Output:
+Element not found
