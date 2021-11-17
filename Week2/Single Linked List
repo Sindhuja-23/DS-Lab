@@ -119,10 +119,10 @@ temp = head;
 119     while(temp != NULL){
 120         temp1 = head;
 121         while(temp1 != NULL){
-122             if(temp1 -> data > temp1 -> link -> data){
-123                 x = temp1 -> data;
-124                 temp1 -> data = temp1 -> link -> data;
-125                 temp1 -> link -> data = x;
+122             if(temp -> data > temp1 -> data){
+123                 x = temp -> data;
+124                 temp -> data = temp1 -> data;
+125                 temp1 -> data = x;
 126             }
 127             temp1 = temp1 -> link;
 128         }
