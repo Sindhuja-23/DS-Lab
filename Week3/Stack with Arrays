@@ -27,7 +27,7 @@ int main(){
                             printf("Stack overflow");
                     }
                     else{
-                        printf("Enter element to be inserted");
+                        printf("Enter element to be inserted:");
                         scanf("%d",&ele);
                         push(ele);
                     }
@@ -64,7 +64,7 @@ int main(){
 4-display
 5-exit
 Enter your choice:1
-Enter element to be inserted3
+Enter element to be inserted:3
 
 1-push
 2-pop
@@ -72,7 +72,7 @@ Enter element to be inserted3
 4-display
 5-exit
 Enter your choice:1
-Enter element to be inserted4
+Enter element to be inserted:4
 
 1-push
 2-pop
@@ -80,7 +80,7 @@ Enter element to be inserted4
 4-display
 5-exit
 Enter your choice:1
-Enter element to be inserted9
+Enter element to be inserted:9
 
 1-push
 2-pop
